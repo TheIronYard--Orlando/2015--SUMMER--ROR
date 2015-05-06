@@ -14,7 +14,7 @@ This file is written in a format called [Markdown](https://guides.github.com/fea
 
 * [X] [Create a Github account](https://github.com/signup)
 * [X] [Star the class project](https://github.com/TheIronYard--Orlando/2015--SUMMER--ROR)
-* [ ] *5 min* Read [the Home page on the class wiki](https://github.com/TheIronYard--Orlando/2015--SUMMER--ROR/wiki)
+* [ ] *5 min* Read over [the class wiki](https://github.com/TheIronYard--Orlando/2015--SUMMER--ROR/wiki)
 * [ ] *5 min* [Create a new *WIP Issue*](https://github.com/TheIronYard--Orlando/2015--SUMMER--ROR/issues/new)
   * [ ] Named `00 -- Here It Comes -- YOUR NAME` (where `YOUR NAME` is _your_ name)
   * [ ] With this checklist as the description
