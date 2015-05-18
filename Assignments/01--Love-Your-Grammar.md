@@ -28,6 +28,9 @@ Create an issue in _this_ repository called `01 -- Love Your Grammar -- YOUR NAM
   * [ ] Fill in your name and avatar _only_
   * [ ] Open a Pull Request from your fork to the original
   * [ ] Add a link to the PR to your _WIP Issue_
+* [ ] **HTML**
+  * [ ] Create `index.html` in your `TIY-Assignments` repo 
+  * [ ] That file should have HTML5 doctype, a head tag, title tag, body tag, and some text.
 ```
 
 Most of your work for this assignment should be committed into a repository called `USERNAME.github.io` where `USERNAME` is your Github username, all lowercase, e.g. `bgates.github.io`. In that repo, create a new _branch_ called `01--love-your-grammar` and ensure all your commits are made _to that branch_. Inside your `USERNAME.github.io` repo, on the `01--love-your-grammar` branch, create a file named `README.md` and paste the following Markdown code:
@@ -79,4 +82,5 @@ There's a repository in `TheIronYard--Orlando` called `student-roster` that's la
   * [_Carol Dweck, Growth Mindsets and Motivation_ on TED-ed](http://ed.ted.com/on/UA77FlTc)
 * [Ruby documentation](http://ruby-doc.org/core-2.2.2/) 
 * [Ruby Monk - Ruby Primer](https://rubymonk.com/learning/books/1-ruby-primer)
+* [A minimal HTML5 document](http://www.sitepoint.com/a-minimal-html-document-html5-edition/) [note: yours can be even more minimal than that - no javascript or css]
 * [Documentation for the `hub` command](http://hub.github.com)
