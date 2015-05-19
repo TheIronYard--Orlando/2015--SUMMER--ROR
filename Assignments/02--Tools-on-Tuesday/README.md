@@ -59,9 +59,12 @@ Create a ruby file with the following characteristics:
   * if the car gets better than 25mpg, the salesman name should include the phrase "fuel efficient"
   * the salesman name should always include the normal name
   * for example, "the powerful Camaro Z28", "the fuel efficient Fiat X1-9", "the Datsun 710"
+ 
 **BEAST MODE** 
+
 * Find the quickest land yacht
 * Create an array of 3 cars, including the cars with the best mileage among 4-cylinder, 6-cylinder, and 8-cylinder vehicles.
+
 ### Reading Ruby
 
 Continue your documentation of what you've learned about Ruby so far by discussing:
