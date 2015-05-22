@@ -1,0 +1,189 @@
+[
+  {
+    "id": 1,
+    "name": "The Rusty Spoon",
+    "address": "55 W Church St",
+    "website": "therustyspoon.com",
+    "hours": {
+      "Monday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Tuesday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Wednesday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Thursday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Friday": {
+        "Open": "11:00am",
+        "Closed": "11:00pm"
+      },
+      "Saturday": {
+        "Open": "5:00pm",
+        "Closed": "11:00pm"
+      },
+      "Sunday": {
+        "Open": "5:00pm",
+        "Closed": "10:00pm"
+      }
+    },
+    "price": [11,30],
+    "cuisines": ["American (New)", "Gastropub"],
+    "ratings": [9, 7, 8, 7, 9, 7, 8, 9, 10, 7, 7, 7, 9, 9, 8, 10, 7, 10, 7, 9]
+  },
+  {
+    "id": 2,
+    "name": "Artisans Table",
+    "address": "22 E Pine St",
+    "website": "artisanstableorlando.com",
+    "hours": {
+      "Monday": {
+        "Open": "10:00am",
+        "Closed": "10:00pm"
+      },
+      "Tuesday": {
+        "Open": "10:00am",
+        "Closed": "10:00pm"
+      },
+      "Wednesday": {
+        "Open": "10:00am",
+        "Closed": "10:00pm"
+      },
+      "Thursday": {
+        "Open": "10:00am",
+        "Closed": "10:00pm"
+      },
+      "Friday": {
+        "Open": "10:00am",
+        "Closed": "12:00am"
+      },
+      "Saturday": {
+        "Open": "9:00am",
+        "Closed": "12:00am"
+      },
+      "Sunday": {
+        "Open": "9:00am",
+        "Closed": "10:00pm"
+      }
+    },
+    "price": [11,30],
+    "cuisines": ["American (New)", "Breakfast & Brunch", "Vegetarian"],
+    "ratings": [8, 7, 9, 10, 7, 8, 10, 9, 8, 8, 7, 7, 7, 7, 9, 9, 9, 10]
+  },
+  {
+    "id": 3,
+    "name": "Super Rico Columbian Bistro",
+    "address": "57 W Central Blvd",
+    "website": "superricocolumbia.com",
+    "hours": {
+      "Monday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Tuesday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Wednesday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Thursday": {
+        "Open": "11:00am",
+        "Closed": "10:00pm"
+      },
+      "Friday": {
+        "Open": "11:00am",
+        "Closed": "3:00am"
+      },
+      "Saturday": {
+        "Open": "5:00pm",
+        "Closed": "3:00am"
+      }
+    },
+    "price": [5,10],
+    "cuisines": ["Columbian", "Burgers", "Hot Dogs"],
+    "ratings": [9, 9, 8, 9, 9, 7, 9, 9]
+  }, 
+  {
+    "id": 4,
+    "name": "The Flame Broiler",
+    "address": "54 W Church St",
+    "website": "flamebroiler141.com",
+    "hours": {
+      "Monday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      },
+      "Tuesday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      },
+      "Wednesday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      },
+      "Thursday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      },
+      "Friday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      },
+      "Saturday": {
+        "Open": "11:00am",
+        "Closed": "8:00pm"
+      }
+    },
+    "price": [5, 10],
+    "cuisines": ["American (New)"],
+    "ratings": [9, 10, 6, 9, 6, 8, 6, 10, 7, 9, 7]
+  }, 
+  {
+    "id": 5,
+    "name": "Le Gourmet Break",
+    "address": "150 S Magnolia Ave",
+    "website": "le-gourmet-break.com",
+    "hours": {
+      "Monday": {
+        "Open": "8:00am",
+        "Closed": "2:00pm"
+      },
+      "Tuesday": {
+        "Open": "7:30am",
+        "Closed": "2:00pm"
+      },
+      "Wednesday": {
+        "Open": "7:30am",
+        "Closed": "2:00pm"
+      },
+      "Thursday": {
+        "Open": "7:30am",
+        "Closed": "2:00pm"
+      },
+      "Friday": {
+        "Open": "7:30am",
+        "Closed": "2:00pm"
+      },
+      "Saturday": {
+        "Open": "8:00am",
+        "Closed": "2:00pm"
+      },
+      "Sunday": {
+        "Open": "8:00am",
+        "Closed": "2:00pm"
+      }
+    },
+    "price": [5,10],
+    "cuisines": ["Cafes", "Breakfast & Brunch", "Bakeries"],
+    "ratings": [9, 6, 8, 6, 7, 9, 8, 9, 7, 10]
+  }
+]
