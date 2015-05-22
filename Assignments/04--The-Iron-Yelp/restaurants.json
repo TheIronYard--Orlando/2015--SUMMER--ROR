@@ -79,9 +79,9 @@
   },
   {
     "id": 3,
-    "name": "Super Rico Columbian Bistro",
+    "name": "Super Rico Colombian Bistro",
     "address": "57 W Central Blvd",
-    "website": "superricocolumbia.com",
+    "website": "superricocolombia.com",
     "hours": {
       "Monday": {
         "Open": "11:00am",
@@ -109,7 +109,7 @@
       }
     },
     "price": [5,10],
-    "cuisines": ["Columbian", "Burgers", "Hot Dogs"],
+    "cuisines": ["Colombian", "Burgers", "Hot Dogs"],
     "ratings": [9, 9, 8, 9, 9, 7, 9, 9]
   }, 
   {
