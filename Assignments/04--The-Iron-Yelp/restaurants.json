@@ -185,5 +185,44 @@
     "price": [5,10],
     "cuisines": ["Cafes", "Breakfast & Brunch", "Bakeries"],
     "ratings": [9, 6, 8, 6, 7, 9, 8, 9, 7, 10]
-  }
+  },
+  {
+    "id": 6,
+    "name": "Harry Buffalo",
+    "address": "129 Church St",
+    "website": "harrybuffalo.com",
+    "hours": {
+      "Monday": {
+        "Open": "11:00am",
+        "Closed": "2:00am"
+      },
+      "Tuesday": {
+        "Open": "11:00am",
+        "Closed": "2:00am"
+      },
+      "Wednesday": {
+        "Open": "11:00am",
+        "Closed": "2:00am"
+      },
+      "Thursday": {
+        "Open": "11:00am",
+        "Closed": "2:00am"
+      },
+      "Friday": {
+        "Open": "11:00am",
+        "Closed": "2:00am"
+      },
+      "Saturday": {
+        "Open": "8:00am",
+        "Closed": "2:00am"
+      },
+      "Sunday": {
+        "Open": "8:00am",
+        "Closed": "2:00am"
+      }
+    },
+    "price": [5,10],
+    "cuisines": ["Sports Bar", "Burgers"],
+    "ratings": [5, 7, 8, 6, 6, 8, 9, 6, 7, 10]
+  },
 ]
