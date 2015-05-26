@@ -225,4 +225,43 @@
     "cuisines": ["Steakhouses", "Bars"],
     "ratings": [10, 9, 10, 8, 7, 9, 10, 8, 9]
   }
+    {
+    "id": 99,
+    "name": "Church Street Tavern",
+    "address": "120 W Church St",
+    "website": "thechurchstreettavern.com",
+    "hours": {
+      "Monday": {
+        "Open": "11:30am",
+        "Closed": "12:00am"
+      },
+      "Tuesday": {
+        "Open": "11:30am",
+        "Closed": "12:00am"
+      },
+      "Wednesday": {
+        "Open": "11:30am",
+        "Closed": "12:00am"
+      },
+      "Thursday": {
+        "Open": "11:30am",
+        "Closed": "12:00am"
+      },
+      "Friday": {
+        "Open": "11:30am",
+        "Closed": "2:00am"
+      },
+      "Saturday": {
+        "Open": "11:30am",
+        "Closed": "2:00am"
+      },
+      "Sunday": {
+        "Open": "11:30pm",
+        "Closed": "12:00pm"
+      }
+    },
+    "price": [11,30],
+    "cuisines": ["Steakhouses", "Bars"],
+    "ratings": [8, 7, 6, 6, 4, 7, 9, 9, 9, 5]
+  }
 ]
