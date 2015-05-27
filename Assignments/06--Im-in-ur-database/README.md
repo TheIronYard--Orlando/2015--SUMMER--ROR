@@ -33,11 +33,14 @@ Make a folder called `active_record_iron_roster`. Put the `iron_roster.db` file 
 
 For any page that displays multiple people, have a working link to each person's GitHub account (if the account exists).
 
+You'll also need a `person.rb` file defining a Person class which inherits from ActiveRecord::Base and
+makes a connection to the `iron_roster.db` database.
+
 ### Riding a Black Bear Mode
 
 For every page which lists multiple people, display the information in an HTML table.
 
-Delete the `iron_roster.db` file. Now recreate it (in its initial form) by writing and running code in `setup.rb`.
+Delete the `iron_roster.db` file. Now recreate it (in its initial form) by writing and running code in `setup.rb` which takes the data from the `iron_roster.csv` file, parses it, and creates Person instances from it.
 
 ### Beast Mode
 
