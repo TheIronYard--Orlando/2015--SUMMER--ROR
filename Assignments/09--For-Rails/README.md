@@ -18,12 +18,12 @@
       * [ ] stop after these two are in place and test in the rails console
     * [ ] the template
     * [ ] the controller
-      * [ ] and the URLs
+      * [ ] and the URLs (ie the routes)
         * [ ] keep track of all the URLs your app can handle with `rake routes`
-    * [ ] don't forget the CSS and JS
+    * [ ] ** BEAST MODE STARTS HERE ** don't forget the CSS and JS
   * [ ] once you know where things go, put them there
   * [ ] make sure it works in the browser
-  * [ ] once it works, refactor
+  * [ ] ** NIGHTMARE MODE ** once it works, refactor
     * [ ] layout
     * [ ] view partial
     * [ ] helper method(s?)
