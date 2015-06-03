@@ -10,9 +10,6 @@
   *  _WIP Branches_:
     * `TIY-Assignments/09--for-rails` (continue the todo_mvc_v2 on the same branch as yesterday)
     * `TIY-Assignments/10--from-the-ground-up` (make the new Rails project in a new branch)
-  * _WIP Files_:
-    * `TheIronYard--Orlando/student-roster`
-      * `2015-05/ROR/`
 * [ ] **GitHub and You** (instructions below)
 * [ ] Finish todo_mvc_v2
   * [ ] make sure you can add new todos
