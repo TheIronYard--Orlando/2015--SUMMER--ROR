@@ -55,3 +55,23 @@ should be deleted also.
     * [ ] delete a blog post
     * [ ] edit and delete a comment
   * [ ] use some css resources to make the app look less bad
+```
+
+## Extras
+
+If you get through all that, there are many different directions you can go. Here are some ideas:
+
+* find a way to generate lots of [lorem ipsum](http://www.lipsum.com/) of one kind or another to make 100 posts
+* use a pagination gem to list posts 10 at a time
+* promote `author` to be a separate class instead of just a field in both posts and comments
+  * make appropriate relationships between authors and posts and comments
+  * make it possible to add new authors (and edit/delete/etc)
+  * display posts and/or comments by author
+* add [tags](http://en.wikipedia.org/wiki/Tag_(metadata)) to posts. Each post could have multiple tags, and each tag could have multiple posts. Display a list of tags along with each post
+
+
+## Resources
+* http://guides.rubyonrails.org/routing.html (this has shortcut compared to what we've been doing)
+* http://guides.rubyonrails.org/action_controller_overview.html (sections 1-4)
+* http://guides.rubyonrails.org/association_basics.html (section 1, and 2 up to has_many)
+  
