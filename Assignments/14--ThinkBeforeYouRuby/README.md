@@ -16,7 +16,7 @@
     * [ ] cards and the deck
     * [ ] players and cards
     * [ ] game and players
-* ** Practice **
+* **Practice**
   * [ ] fork https://github.com/TheIronYard--Orlando/ror_granular_app 
   * [ ] clone it
     * [ ] make sure you don't clone it inside of an existing git repo!
