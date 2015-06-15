@@ -27,4 +27,8 @@ class BoardTest < MiniTest::Test
   def test_there_are_nine_spaces
     assert_equal 9, @board.spaces.length
   end
+
+  def test_the_spaces_are_in_3_rows
+    assert_equal 3, @board.rows.length
+  end
 end
