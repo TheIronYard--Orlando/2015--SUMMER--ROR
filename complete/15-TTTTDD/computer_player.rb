@@ -6,6 +6,11 @@ class ComputerPlayer
   end
 
   def move(board)
-    [1, 1]
+    legal = false
+    until legal
+      row, column = rand(2), rand(2)
+      legal = board.legal_move?(row, column)
+    end
+    [row, column]
   end
 end

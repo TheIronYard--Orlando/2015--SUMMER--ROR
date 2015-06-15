@@ -18,4 +18,12 @@ class ComputerPlayerTest < MiniTest::Test
     assert (0..2).include?(row)
     assert (0..2).include?(column)
   end
+
+  def test_computer_player_makes_legal_move_on_board
+    @board = Board.new
+    @board.place('X', 1, 1)
+    @player = ComputerPlayer.new('O')
+    row, column = @player.move(@board)
+    refute_equal 1, row
+  end
 end

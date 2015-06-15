@@ -39,6 +39,12 @@ class Board
     filled? && !has_3_in_a_row?(marker)
   end
 
+  def legal_move?(row, column)
+    (0..2).include?(row) &&
+    (0..2).include?(column) &&
+    @spaces[row][column] == ' '
+  end
+  
   private
 
     def diagonals
@@ -62,9 +68,4 @@ class Board
       "-+-+-\n"
     end
 
-    def legal_move?(row, column)
-      (0..2).include?(row) &&
-      (0..2).include?(column) &&
-      @spaces[row][column] == ' '
-    end
 end

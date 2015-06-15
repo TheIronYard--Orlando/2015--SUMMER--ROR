@@ -27,7 +27,7 @@ class Game
       puts "That space is taken."
     end
     if @current_player.is_a?(ComputerPlayer)
-      row, column = @current_player.move
+      row, column = @current_player.move(@board)
       move(row, column)
     end
   end
