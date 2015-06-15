@@ -48,4 +48,8 @@ class BoardTest < MiniTest::Test
               " | | \n"
     assert_equal display, @board.display
   end
+
+  def test_x_can_be_placed_on_empty_board
+    assert @board.place('X', 1, 1)
+  end
 end

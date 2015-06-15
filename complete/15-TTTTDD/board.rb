@@ -26,4 +26,8 @@ class Board
     "-+-+-\n" +
     " | | \n"
   end
+
+  def place(marker, row, column)
+    @spaces[row][column] = marker
+  end
 end
