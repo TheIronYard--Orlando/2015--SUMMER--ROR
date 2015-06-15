@@ -27,8 +27,8 @@ class Board
     @spaces[row][column] = marker if legal_move?(row, column)
   end
 
-  def has_3_in_a_row?
-    rows.any?{|row| row.all?{|space| space == 'X' }}
+  def has_3_in_a_row?(marker)
+    rows.any?{|row| row.all?{|space| space == marker }}
   end
 
   private
