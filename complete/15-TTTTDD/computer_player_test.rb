@@ -23,11 +23,17 @@ class ComputerPlayerTest < MiniTest::Test
     @board = Board.new
     @board.place('X', 1, 1)
     @player = ComputerPlayer.new('O')
-    row, column = @player.move(@board)
-    refute_equal 1, row
+    refute_equal [1, 1], @player.move(@board)
   end
 
   # I wanted to write a test to make computer win if possible,
   # but the board should know what space to go to win
   # so I'll write those tests first
+  def test_computer_player_wins_if_possible
+    @board = Board.new
+    @board.place('X', 1, 1)
+    @board.place('X', 1, 2)
+    @player = ComputerPlayer.new('X')
+    assert_equal [1, 0], @player.move(@board)
+  end
 end

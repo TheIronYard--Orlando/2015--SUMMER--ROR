@@ -6,11 +6,15 @@ class ComputerPlayer
   end
 
   def move(board)
-    legal = false
-    until legal
-      row, column = rand(2), rand(2)
-      legal = board.legal_move?(row, column)
+    if winning_move = board.winning_move_for(@marker)
+      [ winning_move[0], winning_move[1] ]
+    else
+      legal = false
+      until legal
+        row, column = rand(2), rand(2)
+        legal = board.legal_move?(row, column)
+      end
+      [row, column]
     end
-    [row, column]
   end
 end
