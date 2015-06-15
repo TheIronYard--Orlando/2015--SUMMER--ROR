@@ -62,6 +62,25 @@ class Board
     end
   end
 
+  def setup_winning_move_for(marker)
+    potential_setup_opportunities = rows_columns_diagonals.select do |spaces|
+      spaces.select{|space| space == ' '}.length == 2 &&
+      spaces.detect{|space| space == marker }
+    end
+    if potential_setup_opportunities.length == 2
+      object_id_arrays = potential_setup_opportunities.map do |spaces|
+        spaces.map{|space| space.object_id }
+      end
+      if setup_space_object_id = object_id_arrays[0] & object_id_arrays[1]
+        index = spaces.index{|space| space.object_id == setup_space_object_id[0] }
+        # now I change from that single-dimensional index back to the 2-d
+        row = (index / 3) % 3
+        column = index % 3
+        [ row, column ]
+      end
+    end
+  end
+
   private
 
     def diagonals

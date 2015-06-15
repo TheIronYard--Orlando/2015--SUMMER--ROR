@@ -46,4 +46,14 @@ class ComputerPlayerTest < MiniTest::Test
     @player = ComputerPlayer.new('O')
     assert_equal [2, 2], @player.move(@board)
   end
+
+  def test_computer_sets_up_win_on_next_turn_as_3rd_option
+    @board.place('X', 0, 1)
+    @board.place('O', 0, 0)
+    @board.place('X', 1, 0)
+    @board.place('O', 0, 2)
+    @board.place('X', 2, 0)
+    @player = ComputerPlayer.new('O')
+    assert_equal [2, 2], @player.move(@board)
+  end
 end

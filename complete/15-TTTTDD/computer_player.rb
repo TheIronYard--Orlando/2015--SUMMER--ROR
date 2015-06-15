@@ -7,7 +7,7 @@ class ComputerPlayer
 
   def move(board)
     winning_move_for(board) || blocking_move_for(board) ||
-    random_legal_move_for(board)
+    setup_winning_move_for(board) || random_legal_move_for(board)
   end
 
   private
@@ -24,6 +24,10 @@ class ComputerPlayer
       board.winning_move_for(opponent_marker)
     end
 
+    def setup_winning_move_for(board)
+      board.setup_winning_move_for(@marker)
+    end
+    
     def random_legal_move_for(board)
       legal = false
       until legal
