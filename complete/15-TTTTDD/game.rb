@@ -12,12 +12,11 @@ class Game
   end
 
   def start
-    display_current_conditions
+    display_current_conditions(true)
   end
 
   def move(row, column)
     @board.place(@current_marker, row, column)
-    switch_current_marker!
     display_current_conditions
   end
 
@@ -37,9 +36,16 @@ class Game
       end
     end
 
-    def display_current_conditions
+    def display_current_conditions(start = false)
       puts @board.display
-      puts "#{@current_player}'s turn"
+      if @board.spaces.none?{|space| space == ' '} && !@board.has_3_in_a_row?(@current_marker)
+         puts 'Tie'
+      elsif @board.has_3_in_a_row?(@current_marker)
+        puts "#{@current_player} Wins!"
+      else
+        switch_current_marker! unless start
+        puts "#{@current_player}'s turn"
+      end
     end
 
 end

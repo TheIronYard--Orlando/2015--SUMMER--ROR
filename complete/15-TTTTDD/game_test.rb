@@ -58,4 +58,27 @@ class GameTest < MiniTest::Test
   # I was about to write a test for winning, when I realized that depended on
   # the board knowing how to find 3 in a row
   # So I wrote the board test first
+  def test_game_displays_winner
+    @game.move(1, 1) #X
+    @game.move(2, 2) #O
+    @game.move(1, 2) #X
+    @game.move(2, 0) #O
+    assert_output(/#{@game.player_1} Wins!/) { @game.move(1, 0) } #X
+  end
+
+  def test_game_ends_in_tie_if_all_spaces_filled_without_winner
+    # fill the board in like this
+    # XXO
+    # OOX
+    # XOX
+    @game.move(0,0) #X
+    @game.move(0,2) #O
+    @game.move(0,1) #X
+    @game.move(1,0) #O
+    @game.move(1,2) #X
+    @game.move(1,1) #O
+    @game.move(2,0) #X
+    @game.move(2,1) #O
+    assert_output(/Tie/) { @game.move(2, 2)}
+  end
 end
