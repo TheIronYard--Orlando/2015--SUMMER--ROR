@@ -63,10 +63,10 @@ class Board
     end
     if potential_setup_opportunities.length == 2
       object_id_arrays = potential_setup_opportunities.map do |spaces|
-        spaces.map{|space| space.object_id }
+        spaces.select{|space| space == ' ' }.map{|space| space.object_id }
       end
-      if setup_space_object_id = object_id_arrays[0] & object_id_arrays[1]
-        two_d_coordinates_for(setup_space_object_id[0])
+      if setup_space_object_id = (object_id_arrays[0] & object_id_arrays[1])[0]
+        two_d_coordinates_for(setup_space_object_id)
       end
     end
   end

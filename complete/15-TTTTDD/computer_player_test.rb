@@ -56,4 +56,16 @@ class ComputerPlayerTest < MiniTest::Test
     @player = ComputerPlayer.new('O')
     assert_equal [2, 2], @player.move(@board)
   end
+
+  def test_computer_blew_up_here
+    @board.place('X', 0, 1)
+    @board.place('O', 0, 0)
+    @board.place('X', 1, 0)
+    @board.place('O', 1, 2)
+    @board.place('X', 1, 1)
+    @board.place('O', 2, 1)
+    @player = ComputerPlayer.new('X')
+    row, column = @player.move(@board)
+    assert (0..2).include?(row)
+  end
 end

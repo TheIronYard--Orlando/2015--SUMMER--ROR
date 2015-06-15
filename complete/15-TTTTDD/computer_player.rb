@@ -10,6 +10,10 @@ class ComputerPlayer
     setup_winning_move_for(board) || random_legal_move_for(board)
   end
 
+  def to_s
+    "Computer (playing #{@marker})"
+  end
+  
   private
 
     def opponent_marker
@@ -27,11 +31,11 @@ class ComputerPlayer
     def setup_winning_move_for(board)
       board.setup_winning_move_for(@marker)
     end
-    
+
     def random_legal_move_for(board)
       legal = false
       until legal
-        row, column = rand(2), rand(2)
+        row, column = rand(3), rand(3)
         legal = board.legal_move?(row, column)
       end
       [row, column]
