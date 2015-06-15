@@ -68,4 +68,7 @@ class BoardTest < MiniTest::Test
     assert_equal display, @board.display
   end
 
+  def test_board_can_find_3_in_a_row
+    refute @board.has_3_in_a_row?
+  end
 end

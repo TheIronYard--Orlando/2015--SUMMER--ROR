@@ -27,6 +27,10 @@ class Board
     @spaces[row][column] = marker if legal_move?(row, column)
   end
 
+  def has_3_in_a_row?
+    false #simplest thing...
+  end
+  
   private
 
     def display_rows

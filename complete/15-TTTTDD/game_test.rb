@@ -54,4 +54,8 @@ class GameTest < MiniTest::Test
   def test_after_first_player_moves_second_player_prompted
     assert_output(/#{@game.player_2}'s turn/) { @game.move(1, 1) }
   end
+
+  # I was about to write a test for winning, when I realized that depended on
+  # the board knowing how to find 3 in a row
+  # So I wrote the board test first
 end
