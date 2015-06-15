@@ -45,4 +45,12 @@ class GameTest < MiniTest::Test
     @game.move(2, 1)
     assert @game.spaces.include?('O')
   end
+
+  def test_after_first_player_moves_board_is_displayed
+    assert_output(/#{@game.board.display}/) { @game.move(1, 1) }
+  end
+
+  def test_after_first_player_moves_second_player_prompted
+    assert_output(/#{@game.player_2}'s turn/) { @game.move(1, 1) }
+  end
 end
