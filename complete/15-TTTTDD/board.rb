@@ -20,15 +20,26 @@ class Board
   end
 
   def display
-    display_rows = rows.map do |row|
-      "#{row[0]}|#{row[1]}|#{row[2]}\n"
-    end
-    display_rows.join("-+-+-\n")
+    display_rows.join(display_row_separator)
   end
 
   def place(marker, row, column)
-    if @spaces[row][column] == ' '
-      @spaces[row][column] = marker
-    end
+    @spaces[row][column] = marker if legal_move?(row, column)
   end
+
+  private
+
+    def display_rows
+      rows.map do |row|
+        "#{row[0]}|#{row[1]}|#{row[2]}\n"
+      end
+    end
+
+    def display_row_separator
+      "-+-+-\n"
+    end
+
+    def legal_move?(row, column)
+      @spaces[row][column] == ' '
+    end
 end
