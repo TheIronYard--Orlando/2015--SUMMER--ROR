@@ -16,4 +16,10 @@ class Game
   def move(row, column)
     @board.place('X', row, column)
   end
+
+  private
+  
+    def spaces
+      board.spaces
+    end
 end

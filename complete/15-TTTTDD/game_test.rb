@@ -37,6 +37,6 @@ class GameTest < MiniTest::Test
 
   def test_first_move_places_x_on_board
     @game.move(1, 1)
-    assert @game.board.spaces.include?('X')
+    assert @game.spaces.include?('X')
   end
 end
