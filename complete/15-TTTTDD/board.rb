@@ -28,7 +28,8 @@ class Board
   end
 
   def has_3_in_a_row?(marker)
-    rows.any?{|row| row.all?{|space| space == marker }}
+    rows.any?{|row| row.all?{|space| space == marker }} ||
+    columns.any?{|row| row.all?{|space| space == marker }}
   end
 
   private
