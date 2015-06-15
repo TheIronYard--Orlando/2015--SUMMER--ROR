@@ -97,4 +97,6 @@ class GameTest < MiniTest::Test
     @game = Game.new('player_1', 'computer')
     assert @game.player_2.is_a?(ComputerPlayer)
   end
+
+  # I want to test computer can make a move, but that needs test in ComputerPlayer 1st
 end
