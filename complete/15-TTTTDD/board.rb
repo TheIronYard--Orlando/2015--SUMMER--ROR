@@ -46,22 +46,13 @@ class Board
   end
 
   def random_legal_move
-    legal = false
-    until legal
-      row, column = rand(3), rand(3)
-      legal = legal_move?(row, column)
-    end
-    [row, column]
+    random_spaces = (0..2).map{|i| (0..2).map{|j| [i, j]}}.flatten(1).shuffle
+    random_member_of(random_spaces)
   end
 
   def random_open_corner
     corners = [ [0, 0], [0, 2], [2, 0], [2, 2] ].shuffle
-    legal = false
-    until corners.empty? || legal
-      row, column = corners.pop
-      legal = legal_move?(row, column)
-    end
-    [row, column] if legal
+    random_member_of(corners)
   end
 
   def winning_move_for(marker)
@@ -125,4 +116,14 @@ class Board
       _spaces.select{|space| space == two_of_these }.length == 2 &&
       _spaces.detect{|space| space == one_of_these }
     end
+
+    def random_member_of(_spaces)
+      legal = false
+      until legal || _spaces.empty?
+        row, column = _spaces.pop
+        legal = legal_move?(row, column)
+      end
+      [row, column] if legal
+    end
+
 end
