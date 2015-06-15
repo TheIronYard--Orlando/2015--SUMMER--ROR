@@ -1,11 +1,16 @@
 require './board'
+require './computer_player'
 class Game
 
   attr_reader :board, :player_1, :player_2
 
   def initialize(player_1_name, player_2_name)
     @player_1 = player_1_name
-    @player_2 = player_2_name
+    if player_2_name == 'computer'
+      @player_2 = ComputerPlayer.new('O')
+    else
+      @player_2 = player_2_name
+    end
     @board = Board.new
     @current_marker = 'X'
     @current_player = @player_1

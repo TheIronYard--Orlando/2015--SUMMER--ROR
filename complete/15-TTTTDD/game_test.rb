@@ -93,4 +93,8 @@ class GameTest < MiniTest::Test
     assert_output(/O/) { @game.move(1, 2) }
   end
 
+  def test_player_can_be_computer
+    @game = Game.new('player_1', 'computer')
+    assert @game.player_2.is_a?(ComputerPlayer)
+  end
 end
