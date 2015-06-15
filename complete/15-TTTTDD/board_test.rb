@@ -93,4 +93,17 @@ class BoardTest < MiniTest::Test
     assert @board.has_3_in_a_row?('O')
   end
 
+  def test_empty_board_not_filled
+    refute @board.filled?
+  end
+
+  def test_board_is_filled
+    9.times do |n| 
+      marker = n % 2 == 0 ? 'X' : 'O'
+      row = (n / 3) % 3
+      column = n % 3
+      @board.place(marker, row, column)
+    end
+    assert @board.filled?
+  end
 end

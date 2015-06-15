@@ -31,6 +31,10 @@ class Board
     rows_columns_diagonals.any?{|spaces| spaces.all?{|space| space == marker }} 
   end
 
+  def filled?
+    spaces.none?{|space| space == ' '}
+  end
+  
   private
 
     def diagonals
@@ -43,7 +47,7 @@ class Board
     def rows_columns_diagonals
       rows + columns + diagonals
     end
-    
+
     def display_rows
       rows.map do |row|
         "#{row[0]}|#{row[1]}|#{row[2]}\n"
