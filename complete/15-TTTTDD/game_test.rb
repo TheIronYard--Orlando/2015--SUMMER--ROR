@@ -99,4 +99,10 @@ class GameTest < MiniTest::Test
   end
 
   # I want to test computer can make a move, but that needs test in ComputerPlayer 1st
+  def test_computer_moves_after_opponent
+    @game = Game.new('player_1', 'computer')
+    assert_output(/O/) { @game.move(0, 1) }
+  end
+
+
 end
