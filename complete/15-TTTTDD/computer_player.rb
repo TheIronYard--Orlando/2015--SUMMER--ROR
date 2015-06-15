@@ -8,6 +8,8 @@ class ComputerPlayer
   def move(board)
     if winning_move = board.winning_move_for(@marker)
       [ winning_move[0], winning_move[1] ]
+    elsif winning_move = board.winning_move_for(opponent_marker)
+      [ winning_move[0], winning_move[1] ]
     else
       legal = false
       until legal
@@ -17,4 +19,10 @@ class ComputerPlayer
       [row, column]
     end
   end
+
+  private
+
+    def opponent_marker
+      @marker == 'X' ? 'O' : 'X'
+    end
 end
