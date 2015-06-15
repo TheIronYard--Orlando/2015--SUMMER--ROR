@@ -52,4 +52,9 @@ class BoardTest < MiniTest::Test
   def test_x_can_be_placed_on_empty_board
     assert @board.place('X', 1, 1)
   end
+
+  def test_marker_cannot_be_placed_in_filled_space
+    @board.place('X', 1, 1)
+    refute @board.place('O', 1, 1)
+  end
 end

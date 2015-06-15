@@ -28,6 +28,8 @@ class Board
   end
 
   def place(marker, row, column)
-    @spaces[row][column] = marker
+    if @spaces[row][column] == ' '
+      @spaces[row][column] = marker
+    end
   end
 end
