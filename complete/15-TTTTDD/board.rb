@@ -46,9 +46,8 @@ class Board
   end
 
   def winning_move_for(marker)
-    winning_opportunity = rows_columns_diagonals.detect do |spaces|
-      spaces.select{|space| space == marker}.length == 2 &&
-      @winning_space = spaces.detect{|space| space == ' '}
+    rows_columns_diagonals.detect do |spaces|
+      @winning_space = two_and_one_from(marker, ' ', spaces)
     end
     if @winning_space
       # I'm looking for the exact empty space I just found above
@@ -58,18 +57,9 @@ class Board
     end
   end
 
-  def two_d_coordinates_for(space_object_id)
-    index = spaces.index{|space| space.object_id == space_object_id }
-    # now I change from that single-dimensional index back to the 2-d
-    row = (index / 3) % 3
-    column = index % 3
-    [ row, column ]
-  end
-
   def setup_winning_move_for(marker)
     potential_setup_opportunities = rows_columns_diagonals.select do |spaces|
-      spaces.select{|space| space == ' '}.length == 2 &&
-      spaces.detect{|space| space == marker }
+      two_and_one_from(' ', marker, spaces)
     end
     if potential_setup_opportunities.length == 2
       object_id_arrays = potential_setup_opportunities.map do |spaces|
@@ -104,4 +94,16 @@ class Board
       "-+-+-\n"
     end
 
+    def two_d_coordinates_for(space_object_id)
+      index = spaces.index{|space| space.object_id == space_object_id }
+      # now I change from that single-dimensional index back to the 2-d
+      row = (index / 3) % 3
+      column = index % 3
+      [ row, column ]
+    end
+
+    def two_and_one_from(two_of_these, one_of_these, _spaces)
+      _spaces.select{|space| space == two_of_these }.length == 2 &&
+      _spaces.detect{|space| space == one_of_these }
+    end
 end
