@@ -128,7 +128,13 @@ class BoardTest < MiniTest::Test
     refute @board.place('X', 3, 0)
   end
 
-  def test_board_knows_where_to_move_to_win
+  def test_board_knows_empty_board_has_no_winning_move
     refute @board.winning_move_for('X')
+  end
+
+  def test_board_knows_when_there_is_winning_move
+    @board.place('X', 0, 0)
+    @board.place('X', 0, 1)
+    assert @board.winning_move_for('X')
   end
 end

@@ -46,9 +46,12 @@ class Board
   end
 
   def winning_move_for(marker)
-    nil
+    winning_opportunity = rows_columns_diagonals.detect do |spaces|
+      spaces.select{|space| space == marker}.length == 2 &&
+      spaces.detect{|space| space == ' '}
+    end
   end
-  
+
   private
 
     def diagonals
