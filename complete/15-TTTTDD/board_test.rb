@@ -4,6 +4,10 @@ require './board'
 
 class BoardTest < MiniTest::Test
 
+  def setup
+    @board = Board.new
+  end
+
   def test_board_class_exists
     assert Board
   end
@@ -17,12 +21,10 @@ class BoardTest < MiniTest::Test
   # I decided the above test was doing too much, so I split it up
 
   def test_board_starts_with_collection_of_spaces
-    @board = Board.new
     assert @board.spaces.is_a?(Array)
   end
 
   def test_there_are_nine_spaces
-    @board = Board.new
     assert_equal 9, @board.spaces.length
   end
 end
