@@ -39,4 +39,13 @@ class BoardTest < MiniTest::Test
   def test_the_spaces_all_start_empty
     assert @board.spaces.all?{|space| space == ' ' }
   end
+
+  def test_the_empty_board_can_display
+    display = " | | \n" + # \n needed to add newline 
+              "-+-+-\n" +
+              " | | \n" + 
+              "-+-+-\n" +
+              " | | \n"
+    assert_equal display, @board.display
+  end
 end
