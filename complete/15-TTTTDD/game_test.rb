@@ -31,9 +31,10 @@ class GameTest < MiniTest::Test
     assert_output(/#{@game.player_1}'s turn/) { @game.start }
   end
 
-  def test_game_move_places_marker_on_board
-    assert @game.move(1, 1)
-  end
+  # the below test is really superseded by the one after it
+  #def test_game_move_places_marker_on_board
+  #  assert @game.move(1, 1)
+  #end
 
   def test_first_move_places_x_on_board
     @game.move(1, 1)

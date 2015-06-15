@@ -8,18 +8,17 @@ class Game
     @player_2 = player_2_name
     @board = Board.new
     @current_marker = 'X'
+    @current_player = @player_1
   end
 
   def start
-    puts @board.display
-    puts "#{player_1}'s turn"
+    display_current_conditions
   end
 
   def move(row, column)
     @board.place(@current_marker, row, column)
-    puts @board.display
-    puts "#{@player_2}'s turn"
     switch_current_marker!
+    display_current_conditions
   end
 
   def spaces
@@ -31,8 +30,16 @@ class Game
     def switch_current_marker!
       if @current_marker == 'X'
         @current_marker = 'O'
+        @current_player = @player_2
       else
         @current_marker = 'X'
+        @current_player = @player_1
       end
     end
+
+    def display_current_conditions
+      puts @board.display
+      puts "#{@current_player}'s turn"
+    end
+
 end
