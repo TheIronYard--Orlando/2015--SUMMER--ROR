@@ -21,4 +21,8 @@ class BoardTest < MiniTest::Test
     assert @board.spaces.is_a?(Array)
   end
 
+  def test_there_are_nine_spaces
+    @board = Board.new
+    assert_equal 9, @board.spaces.length
+  end
 end
