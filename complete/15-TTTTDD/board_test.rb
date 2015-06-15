@@ -31,4 +31,8 @@ class BoardTest < MiniTest::Test
   def test_the_spaces_are_in_3_rows
     assert_equal 3, @board.rows.length
   end
+
+  def test_the_spaces_are_in_3_columns
+    assert_equal 3, @board.columns.length
+  end
 end

@@ -14,4 +14,8 @@ class Board
   def rows
     @spaces
   end
+
+  def columns
+    @spaces.transpose # see http://apidock.com/ruby/Array/transpose
+  end
 end
