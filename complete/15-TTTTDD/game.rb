@@ -6,6 +6,7 @@ class Game
   def initialize(player_1_name, player_2_name)
     @player_1 = player_1_name
     @board = Board.new
+    @current_marker = 'X'
   end
 
   def start
@@ -14,12 +15,13 @@ class Game
   end
 
   def move(row, column)
-    @board.place('X', row, column)
+    @board.place(@current_marker, row, column)
+    if @current_marker == 'X'
+      @current_marker = 'O'
+    end
   end
 
-  private
-  
-    def spaces
-      board.spaces
-    end
+  def spaces
+    board.spaces
+  end
 end
