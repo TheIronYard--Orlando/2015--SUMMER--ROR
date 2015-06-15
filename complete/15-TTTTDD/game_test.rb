@@ -20,4 +20,8 @@ class GameTest < MiniTest::Test
     assert @game.board.is_a?(Board)
   end
 
+  def test_game_starts_by_displaying_empty_board
+    assert_output(@game.board.display) { @game.start }
+    # http://stackoverflow.com/questions/26854048/ruby-minitest-assert-output-syntax
+  end
 end
