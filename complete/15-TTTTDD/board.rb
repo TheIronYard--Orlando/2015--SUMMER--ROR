@@ -38,7 +38,7 @@ class Board
   def cannot_have_3_in_a_row?(marker)
     filled? && !has_3_in_a_row?(marker)
   end
-  
+
   private
 
     def diagonals
@@ -63,6 +63,8 @@ class Board
     end
 
     def legal_move?(row, column)
+      (0..2).include?(row) &&
+      (0..2).include?(column) &&
       @spaces[row][column] == ' '
     end
 end

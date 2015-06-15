@@ -86,4 +86,11 @@ class GameTest < MiniTest::Test
     @game.move(1,1)
     assert_output(/That space is taken/) { @game.move(1, 1)}
   end
+
+  def test_invalid_move_followed_by_valid_places_correct_marker
+    @game.move(1, 1)
+    @game.move(1, 1)
+    assert_output(/O/) { @game.move(1, 2) }
+  end
+
 end

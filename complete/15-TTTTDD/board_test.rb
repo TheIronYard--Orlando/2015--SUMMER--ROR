@@ -123,4 +123,8 @@ class BoardTest < MiniTest::Test
     @board.place('X', 2, 2)
     assert @board.cannot_have_3_in_a_row?('X')
   end
+
+  def test_marker_cannot_be_placed_outside_board
+    refute @board.place('X', 3, 0)
+  end
 end
