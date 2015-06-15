@@ -88,4 +88,9 @@ class BoardTest < MiniTest::Test
     assert @board.has_3_in_a_row?('X')
   end
 
+  def test_3_in_a_row_finds_diagonals
+    3.times{|n| @board.place('O', n, n)}
+    assert @board.has_3_in_a_row?('O')
+  end
+
 end

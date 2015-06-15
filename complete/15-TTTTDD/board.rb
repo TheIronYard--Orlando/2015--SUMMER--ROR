@@ -29,11 +29,19 @@ class Board
 
   def has_3_in_a_row?(marker)
     rows.any?{|row| row.all?{|space| space == marker }} ||
-    columns.any?{|row| row.all?{|space| space == marker }}
+    columns.any?{|row| row.all?{|space| space == marker }} ||
+    diagonals.any?{|row| row.all?{|space| space == marker }}
   end
 
   private
 
+    def diagonals
+      [
+       [ @spaces[0][0], @spaces[1][1], @spaces[2][2] ],
+        [ @spaces[2][0], @spaces[1][1], @spaces[0][2] ]
+      ]
+    end
+    
     def display_rows
       rows.map do |row|
         "#{row[0]}|#{row[1]}|#{row[2]}\n"
