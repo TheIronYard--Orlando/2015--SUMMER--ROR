@@ -43,21 +43,10 @@ class ComputerPlayer
     end
 
     def corner_if_open_for(board)
-      corners = [ [0, 0], [0, 2], [2, 0], [2, 2] ].shuffle
-      legal = false
-      until corners.empty? || legal
-        row, column = corners.pop
-        legal = board.legal_move?(row, column)
-      end
-      [row, column] if legal
+      board.random_open_corner
     end
 
     def random_legal_move_for(board)
-      legal = false
-      until legal
-        row, column = rand(3), rand(3)
-        legal = board.legal_move?(row, column)
-      end
-      [row, column]
+      board.random_legal_move
     end
 end

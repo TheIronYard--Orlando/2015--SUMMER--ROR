@@ -45,6 +45,25 @@ class Board
     @spaces[row][column] == ' '
   end
 
+  def random_legal_move
+    legal = false
+    until legal
+      row, column = rand(3), rand(3)
+      legal = legal_move?(row, column)
+    end
+    [row, column]
+  end
+
+  def random_open_corner
+    corners = [ [0, 0], [0, 2], [2, 0], [2, 2] ].shuffle
+    legal = false
+    until corners.empty? || legal
+      row, column = corners.pop
+      legal = legal_move?(row, column)
+    end
+    [row, column] if legal
+  end
+
   def winning_move_for(marker)
     rows_columns_diagonals.detect do |spaces|
       @winning_space = two_and_one_from(marker, ' ', spaces)
