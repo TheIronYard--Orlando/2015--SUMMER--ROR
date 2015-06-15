@@ -16,12 +16,20 @@ class Game
 
   def move(row, column)
     @board.place(@current_marker, row, column)
-    if @current_marker == 'X'
-      @current_marker = 'O'
-    end
+    switch_current_marker!
   end
 
   def spaces
     board.spaces
   end
+
+  private
+
+    def switch_current_marker!
+      if @current_marker == 'X'
+        @current_marker = 'O'
+      else
+        @current_marker = 'X'
+      end
+    end
 end
