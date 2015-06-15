@@ -30,4 +30,8 @@ class GameTest < MiniTest::Test
   def test_game_starts_by_prompting_player_one_to_move
     assert_output(/#{@game.player_1}'s turn/) { @game.start }
   end
+
+  def test_game_move_places_marker_on_board
+    assert @game.move(1, 1)
+  end
 end

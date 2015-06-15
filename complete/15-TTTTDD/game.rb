@@ -12,4 +12,8 @@ class Game
     puts @board.display
     puts "#{player_1}'s turn"
   end
+
+  def move(row, column)
+    @board.place('X', row, column)
+  end
 end
