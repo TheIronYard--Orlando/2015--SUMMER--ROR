@@ -135,6 +135,6 @@ class BoardTest < MiniTest::Test
   def test_board_knows_when_there_is_winning_move
     @board.place('X', 0, 0)
     @board.place('X', 0, 1)
-    assert @board.winning_move_for('X')
+    assert_equal [0, 2], @board.winning_move_for('X')
   end
 end

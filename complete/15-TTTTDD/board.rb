@@ -48,7 +48,17 @@ class Board
   def winning_move_for(marker)
     winning_opportunity = rows_columns_diagonals.detect do |spaces|
       spaces.select{|space| space == marker}.length == 2 &&
-      spaces.detect{|space| space == ' '}
+      @winning_space = spaces.detect{|space| space == ' '}
+    end
+    if @winning_space
+      # I'm looking for the exact empty space I just found above
+      # the one with the same object_id
+      # in #spaces, which is my flattened array of spaces on the board
+      index = spaces.index{|space| space.object_id == @winning_space.object_id }
+      # now I change from that single-dimensional index back to the 2-d
+      row = (index / 3) % 3
+      column = index % 3
+      [ row, column ]
     end
   end
 
