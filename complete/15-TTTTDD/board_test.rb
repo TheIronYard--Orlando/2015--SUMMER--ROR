@@ -106,4 +106,21 @@ class BoardTest < MiniTest::Test
     end
     assert @board.filled?
   end
+
+  def test_board_knows_when_3_in_a_row_impossible
+    # fill the board in like this
+    # XXO
+    # OOX
+    # XOX
+    @board.place('X', 0, 0)
+    @board.place('O', 0, 2)
+    @board.place('X', 0, 1)
+    @board.place('O', 1, 0)
+    @board.place('X', 1, 2)
+    @board.place('O', 1, 1)
+    @board.place('X', 2, 0)
+    @board.place('O', 2, 1)
+    @board.place('X', 2, 2)
+    assert @board.cannot_have_3_in_a_row?('X')
+  end
 end

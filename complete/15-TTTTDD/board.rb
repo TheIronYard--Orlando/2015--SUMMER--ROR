@@ -34,6 +34,10 @@ class Board
   def filled?
     spaces.none?{|space| space == ' '}
   end
+
+  def cannot_have_3_in_a_row?(marker)
+    filled? && !has_3_in_a_row?(marker)
+  end
   
   private
 
