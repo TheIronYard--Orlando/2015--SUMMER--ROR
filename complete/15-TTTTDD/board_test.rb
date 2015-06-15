@@ -35,4 +35,8 @@ class BoardTest < MiniTest::Test
   def test_the_spaces_are_in_3_columns
     assert_equal 3, @board.columns.length
   end
+
+  def test_the_spaces_all_start_empty
+    assert @board.spaces.all?{|space| space == ' ' }
+  end
 end
