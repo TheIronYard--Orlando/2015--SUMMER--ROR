@@ -28,9 +28,9 @@ class Board
   end
 
   def has_3_in_a_row?
-    false #simplest thing...
+    rows.any?{|row| row.all?{|space| space == 'X' }}
   end
-  
+
   private
 
     def display_rows

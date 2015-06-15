@@ -71,4 +71,10 @@ class BoardTest < MiniTest::Test
   def test_board_can_find_3_in_a_row
     refute @board.has_3_in_a_row?
   end
+
+  def test_board_w_3_Xs_in_1st_row_has_3_in_a_row
+    3.times{|n| @board.place('X', 0, n) }
+    assert @board.has_3_in_a_row?
+  end
+
 end
