@@ -14,7 +14,7 @@ class ComputerPlayerTest < MiniTest::Test
 
   def test_computer_player_can_make_move_on_board
     @player = ComputerPlayer.new('X')
-    row, column = @player.move
+    row, column = @player.move(Board.new)
     assert (0..2).include?(row)
     assert (0..2).include?(column)
   end
