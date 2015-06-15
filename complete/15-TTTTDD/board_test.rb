@@ -127,4 +127,8 @@ class BoardTest < MiniTest::Test
   def test_marker_cannot_be_placed_outside_board
     refute @board.place('X', 3, 0)
   end
+
+  def test_board_knows_where_to_move_to_win
+    refute @board.winning_move_for('X')
+  end
 end

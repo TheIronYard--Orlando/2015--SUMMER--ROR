@@ -26,4 +26,8 @@ class ComputerPlayerTest < MiniTest::Test
     row, column = @player.move(@board)
     refute_equal 1, row
   end
+
+  # I wanted to write a test to make computer win if possible,
+  # but the board should know what space to go to win
+  # so I'll write those tests first
 end

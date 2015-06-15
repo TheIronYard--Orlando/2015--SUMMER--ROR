@@ -44,6 +44,10 @@ class Board
     (0..2).include?(column) &&
     @spaces[row][column] == ' '
   end
+
+  def winning_move_for(marker)
+    nil
+  end
   
   private
 
