@@ -16,8 +16,11 @@ class Game
   end
 
   def move(row, column)
-    @board.place(@current_marker, row, column)
-    display_current_conditions
+    if @board.place(@current_marker, row, column)
+      display_current_conditions
+    else
+      puts "That space is taken."
+    end
   end
 
   def spaces

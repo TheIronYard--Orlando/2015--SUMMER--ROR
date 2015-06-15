@@ -81,4 +81,9 @@ class GameTest < MiniTest::Test
     @game.move(2,1) #O
     assert_output(/Tie/) { @game.move(2, 2)}
   end
+
+  def test_invalid_moves_prompt_for_valid_move
+    @game.move(1,1)
+    assert_output(/That space is taken/) { @game.move(1, 1)}
+  end
 end
