@@ -28,9 +28,7 @@ class Board
   end
 
   def has_3_in_a_row?(marker)
-    rows.any?{|row| row.all?{|space| space == marker }} ||
-    columns.any?{|row| row.all?{|space| space == marker }} ||
-    diagonals.any?{|row| row.all?{|space| space == marker }}
+    rows_columns_diagonals.any?{|spaces| spaces.all?{|space| space == marker }} 
   end
 
   private
@@ -40,6 +38,10 @@ class Board
        [ @spaces[0][0], @spaces[1][1], @spaces[2][2] ],
         [ @spaces[2][0], @spaces[1][1], @spaces[0][2] ]
       ]
+    end
+
+    def rows_columns_diagonals
+      rows + columns + diagonals
     end
     
     def display_rows
