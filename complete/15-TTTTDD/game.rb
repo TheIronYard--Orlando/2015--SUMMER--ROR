@@ -38,7 +38,7 @@ class Game
 
     def display_current_conditions(start = false)
       puts @board.display
-      if @board.filled? && !@board.has_3_in_a_row?(@current_marker)
+      if @board.cannot_have_3_in_a_row?(@current_marker)
          puts 'Tie'
       elsif @board.has_3_in_a_row?(@current_marker)
         puts "#{@current_player} Wins!"
