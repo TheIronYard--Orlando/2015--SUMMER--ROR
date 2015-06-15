@@ -54,12 +54,16 @@ class Board
       # I'm looking for the exact empty space I just found above
       # the one with the same object_id
       # in #spaces, which is my flattened array of spaces on the board
-      index = spaces.index{|space| space.object_id == @winning_space.object_id }
-      # now I change from that single-dimensional index back to the 2-d
-      row = (index / 3) % 3
-      column = index % 3
-      [ row, column ]
+      two_d_coordinates_for(@winning_space.object_id)
     end
+  end
+
+  def two_d_coordinates_for(space_object_id)
+    index = spaces.index{|space| space.object_id == space_object_id }
+    # now I change from that single-dimensional index back to the 2-d
+    row = (index / 3) % 3
+    column = index % 3
+    [ row, column ]
   end
 
   def setup_winning_move_for(marker)
@@ -72,11 +76,7 @@ class Board
         spaces.map{|space| space.object_id }
       end
       if setup_space_object_id = object_id_arrays[0] & object_id_arrays[1]
-        index = spaces.index{|space| space.object_id == setup_space_object_id[0] }
-        # now I change from that single-dimensional index back to the 2-d
-        row = (index / 3) % 3
-        column = index % 3
-        [ row, column ]
+        two_d_coordinates_for(setup_space_object_id[0])
       end
     end
   end
