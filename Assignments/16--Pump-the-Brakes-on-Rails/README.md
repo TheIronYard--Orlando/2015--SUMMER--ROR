@@ -24,21 +24,21 @@
   * [ ] created new file named `journal-week-4.md`
   * [ ] commited, pushed, and opened PR to `master`
   * [ ] added journal entry
-* [ ] ** Codewars **
+* [ ] **Codewars**
   * [ ] complete http://www.codewars.com/kata/count-by-x
     * [ ] save your code in `codewars/count-by-x.rb`
   * [ ] complete http://www.codewars.com/kata/multiply/
     * [ ] save your code in `codewars/multiply.rb`
   * [ ] complete http://www.codewars.com/kata/dna-to-rna-conversion
     * [ ] save your code in `codewars/dna.rb`
-* [ ] ** Granular App **
+* [ ] **Granular App**
   * [ ] address the latest open issue
   * [ ] push to your ror_granular_app repo
   * [ ] open a PR to the class ror_granular_app repo
-* [ ] ** Connect Four **
+* [ ] **Connect Four**
   * [ ] Write a tdd/connect_four/README.md file describing how much of the tic-tac-toe code would be useful for 
         building a Connect Four game
-  * [ ] ** BEAST MODE **
+  * [ ] **BEAST MODE**
     * [ ] build the Connect Four game 
   ```
 
