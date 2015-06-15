@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @filter %> Cars | The Simple Server</title>
+</head>
+<body>
+  <h1><%= @filter %> Cars!</h1>
+  <p>The following <%= @cars.length %> models are <%= @filter%> automobiles:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cars.each do |car| %>
+        <tr>
+          <td><%= car.manufacturer %></td>
+          <td><%= car.model %></td>
+          <td><%= car.type %></td>
+          <td>$<%= car.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p><a href="/home">Back</a></p>
+</body>
+</html>
