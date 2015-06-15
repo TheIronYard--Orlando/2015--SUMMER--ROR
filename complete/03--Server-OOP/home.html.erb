@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page | Server OOP</title>
+</head>
+<body>
+  <h1>Home Page</h1>
+  <p>This is the home page for the 03 - Server OOP assignment.</p>
+  <p>The template for this page, in particular the use of @filters,
+     was Leslie's idea.</p>
+  <p>Please choose which type of cars to display.</p>
+  <% @filters.each do |filter| %>
+    <p> <a href = "/<%= filter %>" > <%= filter %></a> </p>
+  <% end %>
+  
+  <p><a href = "shutdown">Shut Down</a></p>
+
+</body>
+</html>
