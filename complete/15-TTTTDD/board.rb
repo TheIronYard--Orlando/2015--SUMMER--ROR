@@ -20,11 +20,10 @@ class Board
   end
 
   def display
-    " | | \n" + # simplest thing to get first display test to pass
-    "-+-+-\n" +
-    " | | \n" + 
-    "-+-+-\n" +
-    " | | \n"
+    display_rows = rows.map do |row|
+      "#{row[0]}|#{row[1]}|#{row[2]}\n"
+    end
+    display_rows.join("-+-+-\n")
   end
 
   def place(marker, row, column)

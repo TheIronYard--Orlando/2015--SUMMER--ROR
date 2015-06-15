@@ -57,4 +57,15 @@ class BoardTest < MiniTest::Test
     @board.place('X', 1, 1)
     refute @board.place('O', 1, 1)
   end
+
+  def test_non_empty_board_can_display
+    display = " | | \n" + # \n needed to add newline 
+              "-+-+-\n" +
+              " |X| \n" + 
+              "-+-+-\n" +
+              " | | \n"
+    @board.place('X', 1, 1)
+    assert_equal display, @board.display
+  end
+
 end
