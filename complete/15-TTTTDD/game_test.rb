@@ -21,7 +21,13 @@ class GameTest < MiniTest::Test
   end
 
   def test_game_starts_by_displaying_empty_board
-    assert_output(@game.board.display) { @game.start }
+    assert_output(/#{@game.board.display}/) { @game.start }
     # http://stackoverflow.com/questions/26854048/ruby-minitest-assert-output-syntax
+    # I changed the argument to a regular expression once the output included both
+    # the board and the player name (below test)
+  end
+
+  def test_game_starts_by_prompting_player_one_to_move
+    assert_output(/#{@game.player_1}'s turn/) { @game.start }
   end
 end
