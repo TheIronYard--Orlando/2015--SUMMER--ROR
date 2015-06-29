@@ -41,6 +41,6 @@ Partners:
 * [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) (Advanced)
 
 * [The Document Object Model (DOM)](http://en.wikipedia.org/wiki/Document_Object_Model)
-  * [_Web APIs: Document Object Model_ on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+  * [_Web APIs: Document Object Model_ on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
   * [_Interactive Web Pages with JavaScript_ on Team Treehouse](http://teamtreehouse.com/library/interactive-web-pages-with-javascript)
   * [_Try jQuery_ on Code School](https://www.codeschool.com/courses/try-jquery)
