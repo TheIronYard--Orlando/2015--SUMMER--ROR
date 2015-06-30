@@ -7,7 +7,6 @@ It might be a soft 'j'. (I never tire of that joke.)
 ```markdown
 * [ ] latest issue in granular app
 * [ ] read http://jqfundamentals.com/
+* [ ] http://www.codewars.com/kata/who-has-the-most-money/ruby
 ```
 
-...and I'd have picked out something from codewars, but it's down. So if it comes back up, I'll find a reasonable
-challenge on there.
