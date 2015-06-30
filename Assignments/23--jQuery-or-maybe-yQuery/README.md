@@ -1,4 +1,4 @@
-# jQuery or Maybe jQuery
+# jQuery or Maybe yQuery
 
 It might be a soft 'j'. (I never tire of that joke.)
 
