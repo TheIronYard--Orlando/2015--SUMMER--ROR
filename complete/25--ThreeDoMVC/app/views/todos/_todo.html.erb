@@ -1,0 +1,21 @@
+<li <%= 'class=completed' if todo.complete? %> id="todo_<%= todo.id %>">
+  <!-- If this list item is being edited, the div.view can be omitted -->
+  <div class="view">
+    <%= form_for todo, remote: true do |f| %>
+      <%= f.check_box :complete, class: 'toggle' %>
+    <% end %>
+  <!-- <form class="edit_todo" id="edit_todo_1" action="/todos/1" accept-charset="UTF-8" data-remote="true" method="post">
+    <input name="utf8" type="hidden" value="✓">
+    <input type="hidden" name="_method" value="patch">
+    <input name="todo[complete]" type="hidden" value="0">
+    <input class="toggle" type="checkbox" value="1" name="todo[complete]" id="todo_complete">
+</form> -->
+    <a><%= todo.name %></a>
+    <%= button_to todo, method: :delete, remote: true, class: 'destroy' do %>
+    <% end %>
+  </div>
+  <!-- The following form should appear only if this list item is being edited -->
+  <%= form_for todo, remote: true do |f| %>
+    <%= f.text_field :name, class: 'edit' %>
+  <% end %>
+</li>

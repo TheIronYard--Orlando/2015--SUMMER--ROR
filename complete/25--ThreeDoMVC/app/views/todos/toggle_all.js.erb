@@ -1,0 +1,4 @@
+$("#todo-list li").<%= @toggle_to ? 'add' : 'remove' %>Class('completed').find('input[type="checkbox"]').prop('checked', <%= @toggle_to %>);
+
+<%= render partial: 'bottom_row', locals: { count: @count,
+                                            complete: @any_complete } %>

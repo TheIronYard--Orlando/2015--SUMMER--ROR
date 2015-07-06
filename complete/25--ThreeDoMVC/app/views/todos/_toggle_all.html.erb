@@ -1,0 +1,4 @@
+<%= form_tag toggle_all_todos_path, remote: true, method: :patch do %>
+  <%= check_box_tag :toggle_all, 1, any_complete, id: 'toggle-all' %>
+  <%= label_tag :toggle_all, "Mark all as complete", for: 'toggle-all' %>
+<% end %>

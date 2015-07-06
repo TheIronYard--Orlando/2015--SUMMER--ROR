@@ -1,0 +1,18 @@
+<%= form_for todo, remote: true do |f| %>
+  <%= f.text_field :name, id: 'new-todo', 
+                          placeholder: "What needs to be done?", autofocus: true %>
+<% end %>
+
+<!-- the above partial generates this html
+<form class="new_todo" id="new_todo" action="/todos" accept-charset="UTF-8" data-remote="true" method="post">
+  <input name="utf8" type="hidden" value="✓">
+  <input id="new-todo" placeholder="What needs to be done?" autofocus="autofocus" type="text" name="todo[name]">
+</form>
+-->
+
+<!-- the most important parts of the html are these
+<form action="/todos" method="POST" data-remote="true">
+      <input id="new-todo" placeholder="What needs to be done?"  name=
+      "todo[title]" autofocus>
+    </form>
+-->
