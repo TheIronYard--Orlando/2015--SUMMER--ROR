@@ -1,0 +1,21 @@
+$("#new_todo input[name*='name']").val('');
+$("<%= j(render @todo) %>").appendTo('#todo-list');
+/* render partial: 'todo', locals: { todo: @todo }
+same as
+render @todo, because @todo is a single Todo item
+
+render partial: 'todo', collection: @todos
+same as
+render @todos, because @todos is a collection of Todo items 
+*/
+
+
+$("#todo-count").replaceWith("<%= j(render partial: 'count', locals: { count: @count }) %>");
+/* render partial: 'count' looks like
+// <span id="todo-count"><strong>5</strong> items left</span>
+// call escape_javascript (or its synonym, j) on the partial to get
+// <span id=\"todo-count\"><strong>5<\/strong> items left<\/span> 
+*/
+<% if @count == 1 %>
+  $("#todo-list").before("<%= j(render(partial: 'toggle_all', locals: { any_complete: false })) %>")
+<% end %>

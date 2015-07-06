@@ -1,0 +1,3 @@
+<% @todos.each do |todo| %>
+  $("#todo_<%= todo.id %>").remove();
+<% end %>

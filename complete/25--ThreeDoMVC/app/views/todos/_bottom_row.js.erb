@@ -1,0 +1,10 @@
+$("#todo-count").replaceWith("<%= j(render partial: 'count', 
+                              locals: { count: count }) %>");
+// update the clear-completed link
+// hide if there are no incomplete items
+// show if there are any complete items
+<% if complete %>
+  $("#clear-completed").show();
+<% else %>
+  $("#clear-completed").hide();
+<% end %>

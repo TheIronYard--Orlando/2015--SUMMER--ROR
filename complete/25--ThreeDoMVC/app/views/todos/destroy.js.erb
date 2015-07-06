@@ -1,0 +1,4 @@
+$("#todo_<%= @todo.id %>").remove();
+// update the todo count
+<%= render partial: 'bottom_row', locals: { count: @count,
+                                            complete: @any_complete } %>

@@ -1,0 +1,16 @@
+// when a todo is toggled,
+// add or remove the completed class to the li
+$("#todo_<%= @todo.id %>").<%= @todo.complete?? 'add' : 'remove' %>Class("completed");
+console.log($("#todo_<%= @todo.id %>"));
+// check or uncheck the toggle all checkbox
+$('#toggle-all').prop('checked', <%= !@more_todo %>);
+
+<%= render partial: 'bottom_row', locals: { count: @count,
+                                            complete: @any_complete } %>
+
+$("#todo_<%= @todo.id %>").removeClass('editing');
+$("#todo_<%= @todo.id %> a").text("<%= @todo.name %>");
+
+if($("#filters .selected").attr('href') == "/active" && <%= @todo.complete? %>){
+  $("#todo_<%= @todo.id %>").hide();
+}
